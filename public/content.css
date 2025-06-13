@@ -1,0 +1,290 @@
+
+/* Estilos para o modal de XPath */
+.xpath-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.xpath-modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.xpath-modal-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.xpath-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.xpath-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.xpath-modal-close:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.xpath-confidence {
+  margin: 20px 24px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+.confidence-label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.confidence-reason {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.xpath-result {
+  margin: 20px 24px;
+}
+
+.xpath-result label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.xpath-code {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.xpath-code code {
+  flex: 1;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  color: #1e40af;
+  background: none;
+  word-break: break-all;
+}
+
+.generation-buttons {
+  margin: 20px 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.regenerate {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.action-btn.regenerate:hover {
+  background-color: #2563eb;
+}
+
+.action-btn.ai-generate {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  color: white;
+}
+
+.action-btn.ai-generate:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+}
+
+.action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.copy-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background-color: #059669;
+}
+
+.framework-section {
+  margin: 20px 24px;
+}
+
+.framework-section label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.framework-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.framework-btn {
+  padding: 10px 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.framework-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.framework-btn.active {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+.snippet-result {
+  margin: 20px 24px;
+}
+
+.snippet-result label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.snippet-code {
+  position: relative;
+  background-color: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.snippet-code pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.snippet-code code {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.snippet-code .copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin: 8px 24px;
+  padding: 8px 12px;
+  background: #fef2f2;
+  border-radius: 4px;
+  border-left: 3px solid #ef4444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .xpath-modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .generation-buttons {
+    flex-direction: column;
+  }
+  
+  .framework-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .xpath-code {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .snippet-code .copy-btn {
+    position: static;
+    margin-top: 12px;
+    align-self: flex-start;
+  }
+}

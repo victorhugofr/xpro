@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPath Generator Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <h1>XPath Generator Pro</h1>
+      </div>
+      <div class="version">v1.0</div>
+    </div>
+
+    <div class="popup-content">
+      <div class="action-section">
+        <h2>Gerar XPath</h2>
+        <p>Selecione um elemento na página para gerar um XPath inteligente com análise de confiabilidade.</p>
+        
+        <button id="selectElement" class="primary-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 3L21 9L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 3L10 9L4 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Selecionar Elemento
+        </button>
+      </div>
+
+      <div class="info-section">
+        <h3>Como usar:</h3>
+        <ul>
+          <li><strong>Clique no botão acima</strong> ou <strong>botão direito → "Gerar XPath Inteligente"</strong></li>
+          <li>Selecione o elemento desejado na página</li>
+          <li>Receba o XPath com classificação de confiabilidade</li>
+          <li>Gere snippets para seus frameworks favoritos</li>
+        </ul>
+      </div>
+
+      <div class="confidence-guide">
+        <h3>Classificação de Confiabilidade:</h3>
+        <div class="confidence-item confiavel">
+          <div class="confidence-dot"></div>
+          <div>
+            <strong>Confiável</strong>
+            <p>Baseado em ID único ou atributos estáveis</p>
+          </div>
+        </div>
+        <div class="confidence-item atencao">
+          <div class="confidence-dot"></div>
+          <div>
+            <strong>Atenção</strong>
+            <p>Classes comuns ou estrutura moderadamente estável</p>
+          </div>
+        </div>
+        <div class="confidence-item fraco">
+          <div class="confidence-dot"></div>
+          <div>
+            <strong>Fraco</strong>
+            <p>Baseado em índices ou estrutura instável</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="frameworks-section">
+        <h3>Frameworks Suportados:</h3>
+        <div class="frameworks-grid">
+          <div class="framework-item">
+            <div class="framework-icon">🌙</div>
+            <span>Cypress</span>
+          </div>
+          <div class="framework-item">
+            <div class="framework-icon">☕</div>
+            <span>Selenium Java</span>
+          </div>
+          <div class="framework-item">
+            <div class="framework-icon">🐍</div>
+            <span>Selenium Python</span>
+          </div>
+          <div class="framework-item">
+            <div class="framework-icon">🎭</div>
+            <span>Playwright</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-footer">
+      <p>Desenvolvido para automação de testes profissional</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
